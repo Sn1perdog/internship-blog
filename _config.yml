@@ -1,0 +1,5 @@
+title: Internship Blog 
+description: Daily progress updates during my internship.
+theme: minima
+plugins:
+  - jekyll-feed

@@ -1,0 +1,28 @@
+---
+layout: default
+title: Internship Progress
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <header>
+        <h1>Internship blog</h1>
+    </header>
+    <main>
+        {% for post in site.posts %}
+            <article>
+                <h2>{{ post.date | date: "%b %d, %Y" }} - {{ post.title }}</h2>
+                {{ post.content }}
+            </article>
+            <hr>
+        {% endfor %}
+    </main>
+</body>
+</html>
