@@ -1,35 +1,151 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
     margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #f4f4f4;
 }
 
 header {
+    background: #007BFF;
+    color: #fff;
+    padding: 60px 0;
     text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+header .subtitle {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+    opacity: 0.9;
+}
+
+.toc {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.toc h2 {
+    font-size: 1.8rem;
+    color: #007BFF;
+    margin-top: 0;
     margin-bottom: 20px;
 }
 
-main {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-ul {
-    list-style-type: none;
+.toc ul {
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-li {
+.toc ul li {
     margin-bottom: 10px;
 }
 
-a {
-    text-decoration: none;
+.toc ul li a {
     color: #007BFF;
+    text-decoration: none;
 }
 
-a:hover {
+.toc ul li a:hover {
+    text-decoration: underline;
+}
+
+.post {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.post h2 {
+    font-size: 1.8rem;
+    color: #007BFF;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.post-content {
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.post-content h3 {
+    font-size: 1.5rem;
+    color: #007BFF;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.post-content ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.post-content ul li {
+    margin-bottom: 10px;
+}
+
+.post-content code {
+    font-family: 'Source Code Pro', monospace;
+    background: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+/* Post Separator */
+.post-separator {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 40px 0;
+}
+
+/* Back to Top Link */
+.back-to-top {
+    display: block;
+    text-align: right;
+    margin-top: 20px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.back-to-top:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 60px;
+}
+
+footer a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+footer a:hover {
     text-decoration: underline;
 }

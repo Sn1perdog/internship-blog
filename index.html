@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Internship Progress
+title: Internship Progress, KdG 2025
 ---
 
 <!DOCTYPE html>
@@ -10,18 +10,39 @@ title: Internship Progress
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Code+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Internship blog</h1>
+        <div class="container">
+            <h1>My Internship Progress</h1>
+            <p class="subtitle">Daily updates and key milestones during my internship.</p>
+        </div>
     </header>
-    <main>
+    <main class="container">
+        <!-- Table of Contents -->
+        <section class="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                {% for post in site.posts %}
+                    <li>
+                        <a href="#{{ post.date | date: '%Y-%m-%d' }}-{{ post.title | slugify }}">
+                            {{ post.date | date: "%d %b, %Y" }} - {{ post.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <!-- Posts -->
         {% for post in site.posts %}
-            <article>
-                <h2>{{ post.date | date: "%b %d, %Y" }} - {{ post.title }}</h2>
-                {{ post.content }}
+            <article class="post" id="{{ post.date | date: '%Y-%m-%d' }}-{{ post.title | slugify }}">
+                <h2>{{ post.date | date: "%d %b, %Y" }} - {{ post.title }}</h2>
+                <div class="post-content">
+                    {{ post.content }}
+                </div>
             </article>
-            <hr>
+            <hr class="post-separator">
         {% endfor %}
     </main>
 </body>
