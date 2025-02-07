@@ -1,7 +1,6 @@
 Hi there, here's where I dump mermaid diagrams to test rendering:
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'serviceLabelPosition': 'top' }}}%%
 architecture-beta
 
 group core[Core Domain]
