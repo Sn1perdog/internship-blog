@@ -24,25 +24,27 @@ title: Internship Progress, KdG 2025
         <section class="toc">
             <h2>Table of Contents</h2>
             <ul>
-                {% for post in site.posts %}
-                    <li>
-                        <a href="#{{ post.date | date: '%Y-%m-%d' }}-{{ post.title | slugify }}">
-                            {{ post.date | date: "%d %b, %Y" }} - {{ post.title }}
-                        </a>
-                    </li>
+                {% assign reversed_posts = site.posts | reverse %}
+                {% for post in reversed_posts %}
+                <li>
+                    <a href="#{{ post.date | date: '%Y-%m-%d' }}-{{ post.title | slugify }}">
+                        {{ post.date | date: "%d %b, %Y" }} - {{ post.title }}
+                    </a>
+                </li>
                 {% endfor %}
             </ul>
         </section>
 
         <!-- Posts -->
-        {% for post in site.posts %}
-            <article class="post" id="{{ post.date | date: '%Y-%m-%d' }}-{{ post.title | slugify }}">
-                <h2>{{ post.date | date: "%d %b, %Y" }} - {{ post.title }}</h2>
-                <div class="post-content">
-                    {{ post.content }}
-                </div>
-            </article>
-            <hr class="post-separator">
+        {% assign reversed_posts = site.posts | reverse %}
+        {% for post in reversed_posts %}
+        <article class="post" id="{{ post.date | date: '%Y-%m-%d' }}-{{ post.title | slugify }}">
+            <h2>{{ post.date | date: "%d %b, %Y" }} - {{ post.title }}</h2>
+            <div class="post-content">
+                {{ post.content }}
+            </div>
+        </article>
+        <hr class="post-separator">
         {% endfor %}
     </main>
 </body>
